@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="Wifi ADB" description="Connect to android device over wifi for adb debugging" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="C:\adb\adb.exe" />
+      <option name="PARAMETERS" value="connect $Prompt$" />
+      <option name="WORKING_DIRECTORY" value="C:/adb" />
+    </exec>
+  </tool>
+</toolSet>
