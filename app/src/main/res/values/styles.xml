@@ -1,0 +1,162 @@
+<resources>
+
+    <!-- Base application theme.
+          IMPORTANT! the NoActionBar to use a custom toolbar
+          It was set in "MainActivity" OnCreated
+    -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Splash - Welcome Activity - Sliders : Screens background color-->
+    <color name="bg_slider_screen1">#f4b241</color>
+    <color name="bg_slider_screen2">#203d8c</color>
+    <color name="bg_slider_screen3">#bc5e16</color>
+    <color name="bg_slider_screen4">#7B1FA2</color>
+    <color name="bg_slider_screen5">#16bc7d</color>
+    <!-- dots inactive colors -->
+    <color name="dot_inactive_screen1">#ffa000</color>
+    <color name="dot_inactive_screen2">#0e1e49</color>
+    <color name="dot_inactive_screen3">#8c3d00</color>
+    <color name="dot_inactive_screen4">#9C27B0</color>
+    <color name="dot_inactive_screen5">#008c57</color>
+    <!-- dots active colors -->
+    <color name="dot_active_screen1">#f9c772</color>
+    <color name="dot_active_screen2">#3a67e0</color>
+    <color name="dot_active_screen3">#f7c374</color>
+    <color name="dot_active_screen4">#E1BEE7</color>
+    <color name="dot_active_screen5">#74f7c5</color>
+    <array name="array_dot_active">
+        <item>@color/dot_active_screen1</item>
+        <item>@color/dot_active_screen2</item>
+        <item>@color/dot_active_screen3</item>
+        <item>@color/dot_active_screen4</item>
+        <item>@color/dot_active_screen5</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive_screen1</item>
+        <item>@color/dot_inactive_screen2</item>
+        <item>@color/dot_inactive_screen3</item>
+        <item>@color/dot_inactive_screen4</item>
+        <item>@color/dot_inactive_screen5</item>
+    </array>
+
+
+    <!--styles for the actionBar-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Button with round corners-->
+    <style name="RoundButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/margin_padding_size_small</item>
+        <item name="android:textSize">@dimen/text_button</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="SecondaryRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_secondary</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="ActivateRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_activate</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="BluetoothRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_bluetooth</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="RunRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_run</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="EditRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_edit</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="TrashRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_trash</item>
+    </style>
+
+    <!--Button with round corners and colorSecondary as Background-->
+    <style name="OptionRoundButton" parent="RoundButton">
+        <item name="android:background">@drawable/round_button_control_option</item>
+    </style>
+
+    <!--Hide KeyBoard-->
+    <style name="InvisibleFocusHolder">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:inputType">none</item>
+    </style>
+
+    <!-- ScrollBar with NestedBar Style -->
+    <style name="NestedScrollBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">insideOverlay</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <!--Style to text counter in a "TextInputLayout"-->
+    <!--You may use counterOverflowTextAppearance , counterTextAppearance to style the counter-->
+    <style name="counter" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorAccent
+        </item> <!--apply the color you wat here -->
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+
+    <!--Style to OPTION "EditText"-->
+    <!-- Used in PriviaFragment layout -->
+    <style name="EditTextOption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/creating</item>
+        <item name="android:maxLength">100</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:drawableLeft">@drawable/ic_action_edit_gray</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+
+    <!--Style to EXTRA OPTIONS "TextInputLayout"-->
+    <!--You may use counterOverflowTextAppearance , counterTextAppearance to style the counter-->
+    <style name="TextInputLayoutExtraOption" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.8</item>
+        <item name="counterEnabled">true</item>
+        <item name="counterMaxLength">100</item>
+    </style>
+
+
+    <!--Style to EXTRA OPTIONS "TextInputLayout"-->
+    <!--You may use counterOverflowTextAppearance , counterTextAppearance to style the counter-->
+    <style name="FABExtraOption">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.2</item>
+        <item name="android:src">@drawable/ic_action_cancel</item>
+        <item name="fabSize">mini</item>
+    </style>
+
+</resources>

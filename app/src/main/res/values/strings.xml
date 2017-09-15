@@ -1,0 +1,292 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="activity_with_menu">Menu Bar</string>
+    <string name="activity_with_tabs">Tab Layout</string>
+    <string name="activity_rest_volley">Volley</string>
+    <string name="activity_rest_volley_bnav">Volley Bottom Nav</string>
+    <string name="activity_rest_retrofit">Retrofit</string>
+    <string name="activity_with_oauth">Oauth</string>
+    <string name="activity_people">People SQLite - RecyclerView</string>
+    <string name="activity_with_reveal">Reveal Effects</string>
+
+    <string name="list">Lista</string>
+    <string name="detail">Detalles</string>
+    <string name="setting">Ajustes</string>
+
+    <string name="search">Buscar</string>
+    <string name="key_word">Palabra Clave</string>
+    <string name="undo">Deshacer</string>
+    <string name="run">Ejecutar</string>
+    <string name="help">Ayuda</string>
+    <string name="grid_view">Grilla</string>
+    <string name="list_view">Lista</string>
+    <string name="languages">Idiomas</string>
+    <string name="languages_hint">Para cambiar el idioma es necesario reiniciar la Aplicacion.</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_english">Ingles</string>
+    <string name="language_portuguese">Portugués</string>
+
+    <string name="yes">Si</string>
+    <string name="created">Creada</string>
+    <string name="created_error">Error creando</string>
+    <string name="save">Guardar</string>
+    <string name="create">Crear</string>
+    <string name="update">Actualizar</string>
+    <string name="updated">Actualizado</string>
+    <string name="activate">Activar</string>
+    <string name="deactivate">Desactivar</string>
+    <string name="creating">Creando…</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="continues">Continuar</string>
+    <string name="done">Hecho</string>
+
+
+    <string-array name="tab_items">
+        <item>RAM</item>
+        <item>SQLite</item>
+    </string-array>
+
+    <string name="id">ID</string>
+    <string name="title">Titulo</string>
+    <string name="description">Descripción</string>
+    <string name="type">Tipo</string>
+
+    <string name="text_formatted">Tarjeta %1$d de %2$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="long_text_scroll">
+        Standard App bar scrolling with only Toolbar\n\n\n
+
+    scroll off-screen with the content and returns when the user reverse scrolls.
+    stay fixed at the top with content scrolling under it.\n\n\n\n
+
+        To achieve this, apart from the above basic setup code implementation:\n\n
+
+The Toolbar needs to have app:layout_scrollFlags\n\n
+
+            scroll -will be scrolled along with the content.\n\n
+
+        enterAlways -when content is pulled down, immediately app bar will appear.\n\n
+
+        snap -when the AppBar is half scrolled and content scrolling stopped, this will allow the AppBar to settle either hidden or appear based on the scrolled size of Toolbar.\n\n
+
+        Once app:layout_scrollFlags added to Toolbar, the content view (Either a NestedScrollView or RecyclerView) needs to have app:layout_behavior tag.\n\n
+    </string>
+    <string name="long_text_scrolling">
+                    Basic Setup\n\n
+                        \n\n
+                        Before we start jumping in and see all types of scrolling behavior, we needs to be clear about the basic setup and implementation.\n\n
+                        \n\n
+                        Use design support library to achieve AppBar scrolling behavior. This library provides many of the material design components.\n\n
+                        \n\n
+                        In app build.gradle,\n\n
+                        \n\n
+                        dependencies {\n\n
+                            compile \'com.android.support:design:X.X.X\'\n\n
+                        }\n\n
+                        \n\n
+                        Extend android.support.v7.app.AppCompatActivity in the Activity class.\n\n
+                        \n\n
+                        public class MainActivity extends AppCompatActivity {\n\n
+                        \n\n
+                        In the layout xml, we need to have CoordinatorLayout in the top. Add Toolbar inside AppBarLayout and the AppBarLayout needs to be inside the CoordinatorLayout. CoordinatorLayout is the one, which gives proper scrolling and material animations to the views attached with it like FloatingButtons, ModalSheets and SnackBar.\n\n
+                        \n\n
+                        -android.support.design.widget.CoordinatorLayout \n\n
+                            xmlns:android="http://schemas.android.com/apk/res/android"\n\n
+                            xmlns:app="http://schemas.android.com/apk/res-auto"\n\n
+                            android:layout_width="match_parent"\n\n
+                            android:layout_height="match_parent"\n\n
+                            android:orientation="vertical">\n\n
+                        -android.support.design.widget.AppBarLayout\n\n
+                                android:layout_width="match_parent"\n\n
+                                android:layout_height="wrap_content"\n\n
+                                android:background="?attr/colorPrimary">\n\n
+                        -android.support.v7.widget.Toolbar\n\n
+                                    android:id="@+id/toolbar"/>\n\n
+                        -/android.support.design.widget.AppBarLayout>\n\n
+                        ...\n\n
+                        -/android.support.design.widget.CoordinatorLayout>\n\n
+                        \n\n
+                        That’s it. We have done with the basic implementation and after this, there are some flags that will decide the scrolling behavior.\n\n
+                        \n\n
+                            scroll off-screen with the content and returns when the user reverse scrolls.\n\n
+                            stay fixed at the top with content scrolling under it.\n\n
+                        To achieve this, apart from the above basic setup code implementation:\n\n
+                        \n\n
+                        The Toolbar needs to have app:layout_scrollFlags\n\n
+                        \n\n
+                        -android.support.v7.widget.Toolbar\n\n
+                            ...\n\n
+                            app:layout_scrollFlags="scroll|enterAlways|snap"/>\n\n
+                        \n\n
+                        scroll -will be scrolled along with the content. \n\n
+                        \n\n
+                        enterAlways -when content is pulled down, immediately app bar will appear.\n\n
+                        \n\n
+                        snap -when the AppBar is half scrolled and content scrolling stopped, this will allow the AppBar to settle either hidden or appear based on the scrolled size of Toolbar.\n\n
+                        \n\n
+                        Once app:layout_scrollFlags added to Toolbar, the content view (Either a NestedScrollView or RecyclerView) needs to have app:layout_behavior tag.\n\n
+                        \n\n
+                        -android.support.v4.widget.NestedScrollView \n\n
+                            ...\n\n
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>\n\n
+                        \n\n
+                        That’s it these two tags along with basic setup is enough to achieve the Standard AppBar with Toolbar scrolling behavior. We can get different behaviors by playing with app:layout_scrollFlags.\n\n
+                        \n\n
+                        Here is clear explanation from Android docs for the flags,\n\n
+                        \n\n
+                        From Android docs\n\n
+                        \n\n
+                            TabBar stays anchored at the top, while the Toolbar scrolls off.\n\n
+                            Whole AppBar stays anchored at the top, with the content scrolling underneath.\n\n
+                            Both the toolbar and tab bar scroll off with content. The TabBar returns on reverse-scroll, and the Toolbar returns on complete reverse scroll.\n\n
+                        \n\n
+                        demo demo demo\n\n
+                        \n\n
+                        To achieve this, we need to add TabLayout inside the AppBarLayout and provide the layout_scrollFlags inside TabLayout. That will be enough to achieve this and we can play around with the scrolling behavior like above examples by just altering the layout_scrollFlags.\n\n
+                        \n\n
+                        -android.support.design.widget.AppBarLayout \n\n
+                            ...>\n\n
+                            -android.support.v7.widget.Toolbar\n\n
+                                .../>\n\n
+                            -android.support.design.widget.TabLayout\n\n
+                                android:layout_width="match_parent"\n\n
+                                android:layout_height="wrap_content"\n\n
+                                app:layout_scrollFlags="scroll|enterAlways|snap"/>\n\n
+                        -/android.support.design.widget.AppBarLayout>\n\n
+                        \n\n
+                            The flexible space shrinks until only the toolbar remains. The title shrinks to 20sp in the navigation bar. When scrolling to the top of the page, the flexible space and the title grow into place again.\n\n
+                        \n\n
+                            The whole app bar scrolls off. When the user reverse scrolls, the toolbar returns anchored to the top. When scrolling all the way back, the flexible space and the title grow into place again.\n\n
+                        \n\n
+                        demo\n\n
+                        \n\n
+                        To get Flexible space for AppBar, we need to use CollapsingToolbarLayout around the ToolBar tag. Which means CoordinatorLayout in the top and AppBarLayout, CollapsingToolbarLayout, ToolbarLayout inside the order.\n\n
+                        \n\n
+                        We need to add height for the AppBarLayout and need to specify app:layout_scrollFlags for CollapsingToolbarLayout.  Also we need to add app:layout_collapseMode=”pin” tag in Toolbar.\n\n
+                        \n\n
+                        -android.support.design.widget.AppBarLayout \n\n
+                            android:layout_width="match_parent"\n\n
+                            android:layout_height="200dp">\n\n
+                        \n\n
+                            -android.support.design.widget.CollapsingToolbarLayout\n\n
+                                android:layout_width="match_parent"\n\n
+                                android:layout_height="match_parent"\n\n
+                                app:contentScrim="?attr/colorPrimary"\n\n
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">\n\n
+                        \n\n
+                                -android.support.v7.widget.Toolbar\n\n
+                                    android:layout_width="match_parent"\n\n
+                                    android:layout_height="?attr/actionBarSize"\n\n
+                                    app:layout_collapseMode="pin"/>\n\n
+                        \n\n
+                            -/android.support.design.widget.CollapsingToolbarLayout>\n\n
+                        \n\n
+                        -/android.support.design.widget.AppBarLayout>\n\n
+                        \n\n
+                        exitUntilCollapsed -flag will make the Flexible space scrolled down while scrolling back to position along with the content.\n\n
+                        \n\n
+                            Similar to the above Flexible space behavior. When scrolling image will pushed up with slight animation and the color changes to primary color.\n\n
+                        \n\n
+                            While reversing the scrolling primary color fades away to leave way for the image been pulled down with a slight animation.\n\n
+                        \n\n
+                        demo\n\n
+                        \n\n
+                        It is very much similar to the Flexible Space implementation with the below changes,\n\n
+                        \n\n
+                            ImageView needs to added inside CollapsingToolbarlayout.\n\n
+                        \n\n
+                            AppBarLayout height specified 200dp will be applied to image.\n\n
+                        \n\n
+                        -android.support.design.widget.AppBarLayout\n\n
+                            android:layout_width="match_parent"\n\n
+                            android:layout_height="wrap_content"\n\n
+                            android:background="?attr/colorPrimary">\n\n
+                            -android.support.design.widget.CollapsingToolbarLayout\n\n
+                                android:layout_width="match_parent"\n\n
+                                android:layout_height="match_parent"\n\n
+                                app:contentScrim="?attr/colorPrimary"\n\n
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed"\n\n
+                                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title">\n\n
+                        \n\n
+                                -ImageView\n\n
+                                    android:layout_width="match_parent"\n\n
+                                    android:layout_height="200dp"\n\n
+                                    app:layout_collapseMode="parallax"/>\n\n
+                            -android.support.v7.widget.Toolbar\n\n
+                                android:id="@+id/toolbar"\n\n
+                                android:layout_width="match_parent"\n\n
+                                app:layout_collapseMode="pin"\n\n
+                                android:layout_height="?attr/actionBarSize"\n\n
+                                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"\n\n
+                                app:theme="@style/ToolBarStyle" />\n\n
+                        -/android.support.design.widget.CollapsingToolbarLayout>\n\n
+                        -/android.support.design.widget.AppBarLayout>\n\n
+                        \n\n
+                            In this scrolling, the AppBar with Flexible space will be placed behind the content. Once content starts scrolling, the app bar will scroll faster than the content until it gets out of the overlapping content view. Once the content reaches top, app bar comes upside of the content and content goes underneath and scrolls smoothly.\n\n
+                        \n\n
+                            The whole AppBar can scroll off-screen along with content and can be returned while reverse scrolling.\n\n
+                        \n\n
+                            There will not be any TabBar placement in this behavior.\n\n
+                        \n\n
+                        demo\n\n
+                        \n\n
+                        This can be achieved by using app:behaviour_overlapTop in the NestedScrollView or RecyclerView. Also in this case we are specifying height value for CollapsingToolbarLayout.\n\n
+                        \n\n
+                        -android.support.design.widget.AppBarLayout\n\n
+                            android:layout_width="match_parent"\n\n
+                            android:layout_height="wrap_content"\n\n
+                            android:background="?attr/colorPrimary">\n\n
+                            -android.support.design.widget.CollapsingToolbarLayout\n\n
+                                android:layout_width="match_parent"\n\n
+                                android:layout_height="172dp"\n\n
+                                app:contentScrim="?attr/colorPrimary"\n\n
+                                app:titleEnabled="false"\n\n
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed"\n\n
+                                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title">\n\n
+                        \n\n
+                            -android.support.v7.widget.Toolbar\n\n
+                                android:id="@+id/toolbar"\n\n
+                                android:layout_width="match_parent"\n\n
+                                app:layout_collapseMode="pin"\n\n
+                                android:layout_height="?attr/actionBarSize"\n\n
+                                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"\n\n
+                                app:theme="@style/ToolBarStyle" />\n\n
+                        -/android.support.design.widget.CollapsingToolbarLayout>\n\n
+                        -/android.support.design.widget.AppBarLayout>\n\n
+                        \n\n
+                        -android.support.v4.widget.NestedScrollView\n\n
+                            android:layout_width="wrap_content"\n\n
+                            android:layout_height="match_parent"\n\n
+                            app:behavior_overlapTop="100dp"\n\n
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior">\n\n
+                        \n\n
+                            ...\n\n
+                        -/android.support.v4.widget.NestedScrollView>\n\n
+                        \n\n
+                        Also we can implement and specify the scrollFlags dynamically through java code.
+                        \n\n
+    </string>
+    <string name="long_text_fragment_adapter">
+        FragmentPagerAdapter\n\n
+        \n\n
+        Good for a limited (fixed) number of items (Fragments). Why? Because it never removes a fragment instance from FragmentManager once it’s created (unless that Activity is finished). It only detaches the Views from Fragments which are currently not visible. onDestroyView() will be called on your Fragment once it’s out of reach and later onCreateView() will be called once you go back to this Fragment.\n\n\n\n
+        FragmentStatePagerAdapter\n\n
+        \n\n
+        A FragmentStatePagerAdapter is more memory savvy. It completely removes Fragment instances from the FragmentManager once they are out of reach. The state of the removed Fragments is stored inside the FragmentStatePagerAdapter. The Fragment instance is recreated once you return back to an existing item and the state is restored. This adapter is suitable for lists with an unknown count or for lists where the items change a lot.\n\n
+        FragmentPagerAdapter — memory leak danger\n\n
+        \n\n
+        Fragments in the FragmentPagerAdapter are only detached and never removed from the FragmentManager (unless the Activity is finished). When using FragmentPagerAdapter you must make sure to clear any references to the current View or Context in onDestroyView(). Otherwise the Garbage Collector can’t release the whole View or even the Activity . This means setting any View/Context related fields to null (Butterknife can unbind them automatically) and also removing any listeners that could leak the Context or View.\n\n
+        \n\n
+        Failing to do so can possible exhaust the memory — imagine you have 10 items in your FragmentPagerAdapter. Swiping through all of them would keep 10 Views in the memory instead of just the last three (depending on setOffScreenPageLimit() setting), rotating the screen would make it even worse (7 out of 10 would still keep a reference to the “destroyed” Activity).
+    </string>
+    <string name="title_activity_persons">PersonsActivity</string>
+    <string name="title_activity_restvolley">RESTVolleyActivity</string>
+    <string name="title_activity_restvolley_bnav">RESTVolleyBNAVActivity</string>
+
+</resources>

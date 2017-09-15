@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dabeloper.android.fragment.PersonFragment">
+
+    <ImageView
+        android:id="@+id/iv_person"
+        android:layout_width="@dimen/img_width_height"
+        android:layout_height="@dimen/img_width_height" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_person_id"
+        android:layout_marginTop="@dimen/margin_padding_size_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:id="@+id/tv_person_name"
+        android:layout_marginTop="@dimen/margin_padding_size_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:id="@+id/tv_person_profession"
+        android:layout_marginTop="@dimen/margin_padding_size_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:id="@+id/tv_person_curriculum"
+        android:layout_marginTop="@dimen/margin_padding_size_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+
+</LinearLayout>

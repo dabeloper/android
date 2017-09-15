@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dabeloper.android.activity.MainActivity"
+    android:padding="@dimen/activity_horizontal_margin">
+
+
+        <Button
+            android:id="@+id/btn_activity_menu"
+            style="@style/SecondaryRoundButton"
+            android:text="@string/activity_with_menu"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/btn_activity_tabs"
+            style="@style/EditRoundButton"
+            android:text="@string/activity_with_tabs"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <Button
+            android:id="@+id/btn_activity_people"
+            style="@style/TrashRoundButton"
+            android:text="@string/activity_people"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <Button
+            android:id="@+id/btn_activity_volley"
+            style="@style/BluetoothRoundButton"
+            android:text="@string/activity_rest_volley"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <Button
+            android:id="@+id/btn_activity_volley_bottom_nav"
+            style="@style/BluetoothRoundButton"
+            android:text="@string/activity_rest_volley_bnav"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <Button
+            android:id="@+id/btn_activity_retrofit"
+            style="@style/ActivateRoundButton"
+            android:text="@string/activity_rest_retrofit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+</LinearLayout>
