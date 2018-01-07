@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    tools:background="@color/background">
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_width="@dimen/img_medium_width_height"
+        android:layout_height="@dimen/img_medium_width_height"
+        android:src="@drawable/ic_action_edit_gray"/>
+    <ImageView
+        android:id="@+id/iv_check_mark"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="2dp"
+        android:layout_width="@dimen/img_small_width_height"
+        android:layout_height="@dimen/img_small_width_height"
+        android:src="@drawable/ic_action_accept"
+        android:background="@drawable/round_button_default_activate"
+        android:visibility="gone"/>
+
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="2dp"
+        android:layout_width="@dimen/img_small_width_height"
+        android:layout_height="@dimen/img_small_width_height"
+        android:src="@drawable/ic_action_important"
+        android:background="@drawable/round_button_default_edit"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/iv_header"
+        android:id="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_padding_size_medium"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_body_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tv_body_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gradientGray"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+        <TextView
+            android:id="@+id/tv_body_created_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gradientGray"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+        <TextView
+            android:id="@+id/tv_body_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gradientGray"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gradientGray"
+        android:layout_marginTop="@dimen/margin_padding_size_small">
+    </View>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottombaritem_free"
+        android:icon="@drawable/ic_money_off_white_24dp"
+        android:title="Free"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bottombaritem_paid"
+        android:icon="@drawable/ic_attach_money_white_24dp"
+        android:title="Paid"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bottombaritem_new"
+        android:icon="@drawable/ic_new_releases_white_24dp"
+        android:title="New"
+        app:showAsAction="ifRoom"/>
+
+</menu>

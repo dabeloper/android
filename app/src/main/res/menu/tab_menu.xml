@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:compat="http://schemas.android.com/apk/res-auto/android">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/search"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+
+    <item
+        android:id="@+id/action_run"
+        android:icon="@drawable/ic_action_play"
+        android:title="@string/run"
+        app:showAsAction="always"
+        android:orderInCategory="100"/>
+
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/ic_action_about"
+        android:title="@string/help"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"/>
+
+    <item
+        android:id="@+id/action_grid_view"
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:title="@string/grid_view"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:visible="false"/>
+
+
+    <item
+        android:id="@+id/action_list_view"
+        android:icon="@drawable/ic_action_view_as_list"
+        android:title="@string/list_view"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:visible="false"/>
+
+
+    <!--<item-->
+        <!--android:id="@+id/action_bluetooth"-->
+        <!--android:icon="@drawable/ic_action_bluetooth"-->
+        <!--android:title="@string/bluetooth"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--android:orderInCategory="100">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/action_bluetooth_discoverable"-->
+                <!--android:title="@string/bt_discoverable" />-->
+            <!--<item-->
+                <!--android:id="@+id/action_bluetooth_off"-->
+                <!--android:title="@string/bt_off" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+
+    <item
+        android:id="@+id/action_languages"
+        android:title="@string/languages"
+        app:showAsAction="never"
+        android:orderInCategory="100">
+        <menu>
+            <item
+                android:id="@+id/action_language_spanish"
+                android:title="@string/language_spanish" />
+            <item
+                android:id="@+id/action_language_english"
+                android:title="@string/language_english" />
+            <item
+                android:id="@+id/action_language_portuguese"
+                android:title="@string/language_portuguese" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorPrimaryLight">#B2DFDB</color>
+    <color name="colorSecondary">#607D8B</color>
+    <color name="colorSecondaryDark">#455A64</color>
+    <color name="colorAccent">#FFC107</color>
+
+    <!-- Normal and dark -->
+    <color name="red">#EA4335</color>
+    <color name="redDark">#C04848</color>
+    <color name="gray">#f3f3f3</color>
+    <color name="grayLight">#E2E2E2</color>
+    <color name="grayDark">#93a2b5</color>
+    <color name="green">#6dd08d</color>
+    <color name="greenDark">#0db143</color>
+    <color name="brown">#e0a77f</color>
+    <color name="brownDark">#cd6f2d</color>
+    <color name="blue">#0A3D91</color>
+    <color name="blueSea">#889abf</color>
+    <color name="blueSeaDark">#3b5996</color>
+    <color name="blueSky">#98cdf3</color>
+    <color name="blueSkyLight">#55abed</color>
+    <color name="blueSkyDark">#2a86cc</color>
+    <color name="blueGray">#355C7D</color>
+    <color name="blueGrayDark">#2d3f55</color>
+
+    <!--Gradient Colors-->
+    <color name="gradientGray">#919E9E</color>
+    <color name="gradientGrayLight">#E3E7E7</color>
+    <color name="gradientGrayDark">#636466</color>
+    <color name="gradientGrayBlack">#333333</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="background">#FAFAFA</color>
+    <color name="backgroundSecondary">#FFFFFF</color>
+
+    <!--Options-->
+    <color name="optionNormal">#00A7F8</color>
+    <color name="optionPressed">#1B0088</color>
+    <color name="optionSelected">#FF5722</color>
+
+</resources>
